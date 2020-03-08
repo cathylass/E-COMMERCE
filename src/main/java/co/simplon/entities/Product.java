@@ -13,12 +13,12 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@AllArgsConstructor   // permet de générer un constructeur avec toutes les variables de la classe
+@NoArgsConstructor    //génère un constructeur par défaut sans paramètres.
+@ToString             //renvoie une chaîne de caractères représentant l'objet.
 public class Product implements Serializable {
 
-@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Id @GeneratedValue(strategy = GenerationType.IDENTITY) //permet de mappé
 //attributs
     private Long id;
     private String designation;

@@ -15,9 +15,9 @@ import java.util.List;
 @RepositoryRestResource
 public interface ProductRepository extends JpaRepository<Product,Long> {
 
-    @RestResource (path="/byDesignation")
+    @RestResource (path = "/byDesignation")
     public List<Product> findByDesignationContains(@Param("mc") String des);
 
-    @RestResource (path="/byDesignationPage")
+    @RestResource (path = "/byDesignationPage")
     public Page<Product> findByDesignationContains(@Param("mc") String des, Pageable pageable);
 }
